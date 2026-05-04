@@ -152,9 +152,7 @@ backend/
   config.py
 ```
 
-# FrameDescribe
-
-A React frontend for AI-powered video frame description. Upload a video, set a frame interval, and get streaming AI-generated descriptions for each frame.
+# Video Frame Describer Frontend
 
 ---
 
