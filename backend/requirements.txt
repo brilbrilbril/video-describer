@@ -1,0 +1,6 @@
+openai
+opencv-python
+celery
+redis
+fastapi[standard]
+pydantic-settings
