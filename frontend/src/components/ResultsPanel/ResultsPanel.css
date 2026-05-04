@@ -1,0 +1,249 @@
+.results-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.results-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid var(--border-dim);
+  margin-bottom: 0.25rem;
+  position: sticky;
+  top: -1.5rem;
+  background: var(--bg-base);
+  z-index: 1;
+  padding-top: 0.25rem;
+}
+
+.results-panel__title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.results-panel__count {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.results-panel__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.results-panel__empty-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-panel__empty-label {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ── Frame card ── */
+.frame-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  animation: slideIn 0.25s ease both;
+}
+
+.frame-card--streaming {
+  border-left: 2px solid var(--blue);
+  background: linear-gradient(135deg, var(--blue-dim) 0%, var(--bg-surface) 60%);
+}
+
+.frame-card--done {
+  border-left: 2px solid var(--border-dim);
+}
+
+.frame-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.frame-card__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.frame-card__badge {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-mid);
+  color: var(--text-secondary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.frame-card__timestamp {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.frame-card__status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+}
+
+.frame-card__status--streaming { color: var(--blue); }
+.frame-card__status--done { color: var(--green); }
+
+/* ── Markdown content ── */
+.frame-card__markdown {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  min-height: 22px;
+}
+
+.frame-card__markdown p {
+  margin: 0 0 0.75em;
+}
+
+.frame-card__markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.frame-card__markdown h1,
+.frame-card__markdown h2,
+.frame-card__markdown h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 1em 0 0.4em;
+  line-height: 1.3;
+}
+
+.frame-card__markdown h1 { font-size: 16px; }
+.frame-card__markdown h2 { font-size: 14px; }
+.frame-card__markdown h3 { font-size: 13px; }
+
+.frame-card__markdown strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.frame-card__markdown em {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.frame-card__markdown ul,
+.frame-card__markdown ol {
+  margin: 0.5em 0 0.75em 1.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.frame-card__markdown li {
+  color: var(--text-primary);
+}
+
+.frame-card__markdown code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--radius-sm);
+  padding: 1px 5px;
+  color: var(--accent);
+}
+
+.frame-card__markdown blockquote {
+  border-left: 2px solid var(--border-bright);
+  margin: 0.5em 0;
+  padding-left: 1em;
+  color: var(--text-secondary);
+}
+
+.frame-card__markdown hr {
+  border: none;
+  border-top: 1px solid var(--border-dim);
+  margin: 0.75em 0;
+}
+
+.frame-card__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 13px;
+  background: var(--blue);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: pulse 0.8s ease infinite;
+}
+
+.frame-card__placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* ── Timings bar ── */
+.frame-card__timings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.frame-card__timings-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.frame-card__timings-label {
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.frame-card__timings-value {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.frame-card__timings-sep {
+  width: 1px;
+  height: 12px;
+  background: var(--border-mid);
+}

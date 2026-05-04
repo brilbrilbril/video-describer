@@ -1,0 +1,210 @@
+.video-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.video-panel__player-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-mid);
+  background: #000;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.video-panel__player-wrap video {
+  width: 100%;
+  display: block;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.video-panel__settings {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+
+.video-panel__file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.video-panel__file-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.video-panel__file-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.video-panel__file-size {
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.video-panel__interval-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.video-panel__interval-label span:first-child {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.video-panel__interval-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.video-panel__interval-unit {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: 3px;
+}
+
+.video-panel__tick-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.video-panel__tick-row span {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.video-panel__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.video-panel__btn-run {
+  flex: 1;
+  background: var(--accent);
+  color: var(--bg-base);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.video-panel__btn-run:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.video-panel__btn-run:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.video-panel__btn-run:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.video-panel__btn-reset {
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-mid);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.video-panel__btn-reset:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.video-panel__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.video-panel__stat {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+}
+
+.video-panel__stat-label {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.video-panel__stat-value {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.video-panel__stat-value--streaming {
+  color: var(--blue);
+}
+
+.video-panel__stat-value--done {
+  color: var(--green);
+}
+
+.video-panel__error {
+  font-size: 12px;
+  color: var(--red);
+  background: var(--red-dim);
+  border: 1px solid rgba(248,113,113,0.2);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+}

@@ -1,0 +1,119 @@
+.workspace {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease both;
+  overflow: hidden;
+}
+
+.workspace__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 52px;
+  border-bottom: 1px solid var(--border-dim);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+}
+
+.workspace__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.workspace__logo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+
+.workspace__topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.workspace__job-id {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workspace__status-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.workspace__status-pill--streaming {
+  color: var(--blue);
+  background: var(--blue-dim);
+  border-color: rgba(91,156,246,0.2);
+}
+
+.workspace__status-pill--done {
+  color: var(--green);
+  background: var(--green-dim);
+  border-color: rgba(74,222,128,0.2);
+}
+
+.workspace__status-pill--idle {
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border-color: var(--border-dim);
+}
+
+.workspace__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.workspace__status-dot--streaming {
+  animation: pulse 1s ease infinite;
+}
+
+.workspace__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  overflow: hidden;
+}
+
+/* Left panel: fixed, does not scroll with page */
+.workspace__left {
+  border-right: 1px solid var(--border-dim);
+  padding: 1.5rem;
+  overflow-y: auto;
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+
+/* Right panel: scrollable results */
+.workspace__right {
+  padding: 1.5rem;
+  overflow-y: auto;
+  height: 100%;
+}
