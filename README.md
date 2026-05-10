@@ -79,8 +79,12 @@ docker run -d -p 6379:6379 redis
 
 **2. Start the Celery worker**
 
+Select one: 
+
 ```bash
 celery -A celery_app worker --loglevel=info
+
+celery -A celery_app worker --loglevel=info --concurrency 1 -P solo   # I'm using this though, iwth administrator access
 ```
 
 **3. Start the FastAPI server**
@@ -165,10 +169,9 @@ backend/
 
 ## Installation
 
-**1. Clone the repo and navigate to the frontend**
+**1. Navigate to the frontend**
 
 ```bash
-git clone https://github.com/brilbrilbril/video-describer.git
 cd frontend
 ```
 
